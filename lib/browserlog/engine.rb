@@ -16,7 +16,7 @@ module Browserlog
       case Rails::VERSION::MAJOR
       when 3
         if SKIP_PATHS.any? { |path| env['PATH_INFO'].include?(path) } ||
-           env['SCRIPT_NAME'] =~ /logs/
+           env['SCRIPT_NAME'] =~ /log/
           silence { super }
         else
           super
